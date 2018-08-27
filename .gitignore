@@ -12,6 +12,9 @@ npm-debug.log*
 # Documentation
 docs
 
+# Temporary directory
+temp
+
 # Runtime data
 pids
 *.pid

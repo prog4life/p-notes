@@ -1,8 +1,8 @@
 {
-  "name": "express-rest-es2017-boilerplate",
-  "version": "1.2.2",
-  "description": "Express boilerplate for building RESTful APIs",
-  "author": "Daniel Sousa <sousa.dfs@gmail.com>",
+  "name": "p-notes",
+  "version": "1.0.0",
+  "description": "Notes App on top of React, Redux, NodeJS + Express + Mongoose REST API (boilerplate used)",
+  "author": "",
   "main": "src/index.js",
   "private": false,
   "license": "MIT",
@@ -36,31 +36,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:danielfsousa/express-rest-es2017-boilerplate.git"
+    "url": ""
   },
-  "keywords": [
-    "express",
-    "node",
-    "node.js",
-    "mongodb",
-    "mongoose",
-    "passport",
-    "es6",
-    "es7",
-    "es8",
-    "es2017",
-    "mocha",
-    "istanbul",
-    "nyc",
-    "eslint",
-    "Travis CI",
-    "coveralls",
-    "REST",
-    "API",
-    "boilerplate",
-    "generator",
-    "starter project"
-  ],
+  "keywords": [],
   "dependencies": {
     "axios": "^0.18.0",
     "bcryptjs": "2.4.3",
