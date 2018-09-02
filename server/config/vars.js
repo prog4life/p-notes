@@ -6,6 +6,8 @@ require('dotenv-safe').load({
   sample: path.join(__dirname, '../../.env.example'),
 });
 
+console.log('process.env.MONGO_URI: ', process.env.MONGO_URI)
+
 module.exports = {
   env: process.env.NODE_ENV,
   port: process.env.PORT,

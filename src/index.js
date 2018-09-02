@@ -1,17 +1,8 @@
-// make bluebird default Promise
-Promise = require('bluebird'); // eslint-disable-line no-global-assign
-const { port, env } = require('./config/vars');
-const app = require('./config/express');
-const mongoose = require('./config/mongoose');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 
-// open mongoose connection
-mongoose.connect();
-
-// listen to requests
-app.listen(port, () => console.info(`server started on port ${port} (${env})`));
-
-/**
-* Exports express
-* @public
-*/
-module.exports = app;
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();

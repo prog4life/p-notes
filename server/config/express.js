@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -42,6 +43,8 @@ app.use(passport.initialize());
 passport.use('jwt', strategies.jwt);
 passport.use('facebook', strategies.facebook);
 passport.use('google', strategies.google);
+
+app.use(express.static(path.join(__dirname, '..', '..', 'build')));
 
 // mount api v1 routes
 app.use('/v1', routes);
