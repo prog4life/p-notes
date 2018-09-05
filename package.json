@@ -5,6 +5,8 @@
   "private": true,
   "main": "server/index.js",
   "dependencies": {
+    "@material-ui/core": "^3.0.2",
+    "await-to-js": "^2.0.1",
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.0",
@@ -23,14 +25,23 @@
     "moment-timezone": "^0.5.13",
     "mongoose": "^4.9.7",
     "morgan": "^1.8.1",
+    "normalizr": "^3.2.4",
     "passport": "^0.4.0",
     "passport-http-bearer": "^1.0.1",
     "passport-jwt": "^4.0.0",
     "pm2": "^3.0.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-prop-types": "^1.0.4",
     "react-scripts": "1.1.5",
-    "uuid": "^3.1.0"
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^3.0.1",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
