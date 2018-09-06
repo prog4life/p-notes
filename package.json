@@ -49,6 +49,12 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "dev": "nodemon ./server/index.js",
-    "serve": "cross-env NODE_ENV=production pm2 start ./server/index.js"
+    "serve": "cross-env NODE_ENV=production pm2 start ./server/index.js",
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "report": "node ./analyze-bundle.js"
+  },
+  "devDependencies": {
+    "source-map-explorer": "^1.6.0",
+    "webpack-bundle-analyzer": "^2.13.1"
   }
 }

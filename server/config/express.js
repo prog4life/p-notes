@@ -44,10 +44,19 @@ passport.use('jwt', strategies.jwt);
 passport.use('facebook', strategies.facebook);
 passport.use('google', strategies.google);
 
-app.use(express.static(path.join(__dirname, '..', '..', 'build')));
-
 // mount api v1 routes
 app.use('/v1', routes);
+
+// TODO:
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static('client/build'));
+// }
+app.use(express.static(path.join(__dirname, '..', '..', 'build')));
+
+app.get('*', (req, res) => {
+  console.log('asterisc route reached');
+  res.sendFile(path.join(__dirname, '..', '..', 'build', 'index.html'));
+})
 
 // if error is not an instanceOf APIError, convert it.
 app.use(error.converter);
