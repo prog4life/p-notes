@@ -10,7 +10,7 @@ console.log('process.env.MONGO_URI: ', process.env.MONGO_URI)
 
 module.exports = {
   env: process.env.NODE_ENV,
-  port: process.env.PORT,
+  port: process.env.SERVER_PORT,
   jwtSecret: process.env.JWT_SECRET,
   jwtExpirationInterval: process.env.JWT_EXPIRATION_MINUTES,
   mongo: {

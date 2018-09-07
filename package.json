@@ -6,6 +6,7 @@
   "main": "server/index.js",
   "dependencies": {
     "@material-ui/core": "^3.0.2",
+    "@material-ui/icons": "^3.0.1",
     "await-to-js": "^2.0.1",
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.5.0",
