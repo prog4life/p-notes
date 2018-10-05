@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import NotesListScreen from 'screens/NotesListScreen';
-import LoginScreen from 'screens/LoginScreen';
+import NotesPage from 'pages/NotesPage';
+import LoginPage from 'pages/LoginPage';
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <Fragment>
         <CssBaseline />
-        {/* <NotesListScreen /> */}
-        <LoginScreen />
+        {/* <NotesPage /> */}
+        <LoginPage />
       </Fragment>
     );
   }

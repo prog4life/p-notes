@@ -52,7 +52,7 @@ const styles = theme => ({
   },
 });
 
-class LoginScreen extends Component {
+class LoginPage extends Component {
   state = {
     mobileOpen: false,
   };
@@ -130,9 +130,9 @@ class LoginScreen extends Component {
   }
 }
 
-LoginScreen.propTypes = {
+LoginPage.propTypes = {
   classes: pT.shape({}).isRequired,
   theme: pT.shape({}).isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(LoginScreen);
+export default withStyles(styles, { withTheme: true })(LoginPage);

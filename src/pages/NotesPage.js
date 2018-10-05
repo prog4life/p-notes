@@ -20,13 +20,13 @@ const styles = {
   },
 };
 
-function NotesListScreen({ classes }) {
+function NotesPage({ classes }) {
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar variant="dense">
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            {/* NOTE: See alternative with SVG MenuIcon in LoginScreen */}
+            {/* NOTE: See alternative with SVG MenuIcon in LoginPage */}
             <Icon>
               {'menu'}
             </Icon>
@@ -40,8 +40,8 @@ function NotesListScreen({ classes }) {
   );
 }
 
-NotesListScreen.propTypes = {
+NotesPage.propTypes = {
   classes: pT.shape({}).isRequired,
 };
 
-export default withStyles(styles)(NotesListScreen);
+export default withStyles(styles)(NotesPage);

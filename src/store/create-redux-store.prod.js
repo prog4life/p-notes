@@ -4,7 +4,7 @@ import createSagaMiddleware from 'redux-saga';
 // import { createLogger } from 'redux-logger'; // TEMP
 import reducer from 'state/reducer';
 
-import { authSaga } from 'state/auth';
+// import { authSaga } from 'state/auth';
 
 const sagaMiddleware = createSagaMiddleware();
 // must be the last middleware in chain
@@ -31,7 +31,7 @@ const createReduxStore = (preloadedState = {}) => {
     composeEnhancers(applyMiddleware(...middlewares)),
   );
 
-  sagaMiddleware.run(authSaga);
+  // sagaMiddleware.run(authSaga);
 
   return store;
 };
