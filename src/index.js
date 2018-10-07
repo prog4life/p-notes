@@ -10,5 +10,5 @@ const store = createReduxStore();
 
 console.log('STATE after STORE creation ', store.getState());
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App store={store} />, document.getElementById('root'));
 registerServiceWorker();
