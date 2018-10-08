@@ -1,0 +1,1 @@
+export const getLoginStatus = state => !!state.auth.refreshToken || false;

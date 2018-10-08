@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-export function refreshToken(state = '', { type, payload, error }) {
+export function refreshToken(state = '1515', { type, payload, error }) {
   switch (type) {
     // case aT.
     default:

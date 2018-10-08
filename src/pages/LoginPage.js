@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
 import pT from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -75,13 +74,6 @@ class LoginPage extends Component {
         <List>{['Items 2']}</List>
       </div>
     );
-
-    // TEMP:
-    const isAdmin = true;
-
-    if (isAdmin) {
-      return <Redirect to="/admin" />;
-    }
 
     return (
       <div className={classes.root}>
