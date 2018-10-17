@@ -7,7 +7,7 @@ webpackProdConfig.plugins.push(
   new BundleAnalyzerPlugin({
     analyzerMode: 'static',
     openAnalyzer: false,
-    reportFilename: 'report.html',
+    reportFilename: '../TEMP/report.html',
   }),
 );
 

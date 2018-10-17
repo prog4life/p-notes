@@ -4,34 +4,37 @@ import { Route, Redirect } from 'react-router';
 import { connect } from 'react-redux';
 import { getLoginStatus } from 'state/selectors';
 
-export const CheckAuthRoute = ({ isLoggedIn, ...rest }) => {
-  console.log('rest from Route ', rest);
-
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        isLoggedIn // TODO: || !routes.some(route => route.path === path) 
-        ? null
-        : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: props.location }
-            }}
-          />
-        )
+export const CheckAuthRoute = ({ isLoggedIn, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) => {
+      console.log('isLoggedIn ', isLoggedIn);
+      if (isLoggedIn) { // TODO: || !routes.some(route => route.path === path) 
+        return null;
       }
-    />
-  );
-};
+      return (
+        <Redirect
+          to={{
+            pathname: "/login",
+            state: { from: props.location }
+          }}
+        />
+      );
+    }}
+  />
+);
 
 CheckAuthRoute.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
 };
 
-const mapStateToProps = state => ({
-  isLoggedIn: getLoginStatus(state),
-});
+// const mapStateToProps = (state) => {
+//   console.log('state ', state);
 
-export default connect(mapStateToProps)(CheckAuthRoute);
+//   return {
+//     isLoggedIn: getLoginStatus(state),
+//   };
+// };
+
+// export default connect(mapStateToProps)(CheckAuthRoute);
+export default CheckAuthRoute;

@@ -6,6 +6,7 @@ import CheckAuthRoute from './CheckAuthRoute';
 import NotesPage from 'pages/NotesPage';
 import LoginPage from 'pages/LoginPage';
 import NotFoundPage from 'pages/NotFoundPage';
+import { getLoginStatus } from 'state/selectors';
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,7 +21,7 @@ class App extends Component {
           <CssBaseline />
           <Router>
             <>
-              <CheckAuthRoute />
+              <CheckAuthRoute isLoggedIn={getLoginStatus(store.getState())} />
               <Switch>
                 <Route path="/" exact component={NotesPage} />
                 <Route exact path="/login" component={LoginPage} />
